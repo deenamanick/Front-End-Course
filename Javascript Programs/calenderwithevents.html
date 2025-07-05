@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Calendar with Events</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; }
+    td {
+      width: 14.28%; height: 80px; text-align: center;
+      border: 1px solid #ccc; vertical-align: top;
+      cursor: pointer;
+    }
+    td:hover { background: #e0f7fa; }
+    #eventBox { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h2>📅 Calendar (Current Month)</h2>
+  <table id="calendar"></table>
+  <div id="eventBox"></div>
+
+  <script>
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+
+    const calendar = document.getElementById('calendar');
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const startDay = new Date(year, month, 1).getDay();
+
+    let html = '<tr>';
+    for (let i = 0; i < startDay; i++) html += '<td></td>';
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      if ((startDay + day - 1) % 7 === 0) html += '</tr><tr>';
+      html += `<td onclick="addEvent(${day})">${day}</td>`;
+    }
+
+    html += '</tr>';
+    calendar.innerHTML = html;
+
+    function addEvent(day) {
+      const event = prompt(`Add event for ${day}/${month + 1}/${year}`);
+      if (event) {
+        document.getElementById('eventBox').innerHTML += `<p><strong>${day}/${month + 1}</strong>: ${event}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

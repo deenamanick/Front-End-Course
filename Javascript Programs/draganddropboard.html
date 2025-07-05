@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kanban Board</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .task-creator {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #taskInput {
+      padding: 10px;
+      width: 250px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    #addTaskBtn {
+      padding: 10px 16px;
+      margin-left: 8px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #addTaskBtn:hover {
+      background-color: #005fa3;
+    }
+
+    .board {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .column {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      min-height: 300px;
+      padding: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .column h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #555;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .task {
+      padding: 12px 16px;
+      margin: 10px 0;
+      background: #e3f2fd;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: grab;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .task:active {
+      cursor: grabbing;
+      transform: scale(1.02);
+      background-color: #bbdefb;
+    }
+
+    .column.drag-over {
+      background-color: #f1f8ff;
+    }
+  </style>
+</head>
+<body>
+  <h2>📋 Kanban Board</h2>
+
+  <div class="task-creator">
+    <input type="text" id="taskInput" placeholder="Enter new task..." />
+    <button id="addTaskBtn">Add Task</button>
+  </div>
+
+  <div class="board">
+    <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="highlight(event)" ondragleave="unhighlight(event)">
+      <h3>To Do</h3>
+    </div>
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="highlight(event)" ondragleave="unhighlight(event)">
+      <h3>Doing</h3>
+    </div>
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="highlight(event)" ondragleave="unhighlight(event)">
+      <h3>Done</h3>
+    </div>
+  </div>
+
+  <script>
+    let taskIdCounter = 0;
+
+    document.getElementById('addTaskBtn').addEventListener('click', () => {
+      const input = document.getElementById('taskInput');
+      const taskText = input.value.trim();
+      if (!taskText) return alert("Please enter a task description.");
+
+      const task = document.createElement('div');
+      task.className = 'task';
+      task.textContent = taskText;
+      task.setAttribute('draggable', 'true');
+      task.id = 'task-' + taskIdCounter++;
+      task.ondragstart = drag;
+
+      document.getElementById('todo').appendChild(task);
+      input.value = '';
+    });
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData('text', ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      const data = ev.dataTransfer.getData('text');
+      const task = document.getElementById(data);
+
+      let target = ev.target;
+      while (!target.classList.contains('column') && target !== document.body) {
+        target = target.parentNode;
+      }
+
+      if (target.classList.contains('column')) {
+        target.classList.remove('drag-over');
+        target.appendChild(task);
+      }
+    }
+
+    function highlight(ev) {
+      let target = ev.target;
+      while (!target.classList.contains('column') && target !== document.body) {
+        target = target.parentNode;
+      }
+      if (target.classList.contains('column')) {
+        target.classList.add('drag-over');
+      }
+    }
+
+    function unhighlight(ev) {
+      let target = ev.target;
+      while (!target.classList.contains('column') && target !== document.body) {
+        target = target.parentNode;
+      }
+      if (target.classList.contains('column')) {
+        target.classList.remove('drag-over');
+      }
+    }
+  </script>
+</body>
+</html>

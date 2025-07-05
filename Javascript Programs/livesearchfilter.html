@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Search Filter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Live Search Filter</h2>
+  <input type="text" id="search" placeholder="Search names..." />
+
+  <ul id="userList">
+    <li>John Doe</li>
+    <li>Jane Smith</li>
+    <li>Michael Johnson</li>
+    <li>Alice Williams</li>
+    <li>Chris Evans</li>
+    <li>Emily Davis</li>
+    <li>Daniel Brown</li>
+    <li>Sarah Wilson</li>
+    <li>David Lee</li>
+    <li>Nancy Clark</li>
+  </ul>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const listItems = document.querySelectorAll('#userList li');
+
+    searchInput.addEventListener('input', function () {
+      const searchText = this.value.toLowerCase();
+
+      listItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.classList.toggle('hidden', !text.includes(searchText));
+      });
+    });
+  </script>
+</body>
+</html>
