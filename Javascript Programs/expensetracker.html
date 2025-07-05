@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .tracker {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    li {
+      background-color: #f9fafb;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      border-left: 5px solid #0077cc;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #d00;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: auto;
+    }
+
+    .delete-btn:hover{
+      background-color:unset;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #222;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tracker">
+    <h2>💸 Expense Tracker</h2>
+    <input type="text" id="desc" placeholder="Description" />
+    <input type="number" id="amount" placeholder="Amount" />
+    <button onclick="addExpense()">Add</button>
+    <ul id="list"></ul>
+    <p>Total: ₹<span id="total">0.00</span></p>
+  </div>
+
+  <script>
+    let total = 0;
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+    function updateUI() {
+      const list = document.getElementById('list');
+      list.innerHTML = '';
+      total = 0;
+
+      expenses.forEach((exp, index) => {
+        total += exp.amount;
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+          ${exp.desc} - ₹${exp.amount.toFixed(2)}
+          <button class="delete-btn" onclick="deleteExpense(${index})">×</button>
+        `;
+        list.appendChild(li);
+      });
+
+      document.getElementById('total').textContent = total.toFixed(2);
+    }
+
+    function addExpense() {
+      const desc = document.getElementById('desc').value.trim();
+      const amt = +document.getElementById('amount').value;
+
+      if (!desc || !amt || amt <= 0) {
+        alert("Please enter a valid description and positive amount.");
+        return;
+      }
+
+      expenses.push({ desc, amount: amt });
+      localStorage.setItem("expenses", JSON.stringify(expenses));
+
+      document.getElementById('desc').value = '';
+      document.getElementById('amount').value = '';
+
+      updateUI();
+    }
+
+    function deleteExpense(index) {
+      if (confirm("Are you sure you want to delete this expense?")) {
+        expenses.splice(index, 1);
+        localStorage.setItem("expenses", JSON.stringify(expenses));
+        updateUI();
+      }
+    }
+
+    // Load on page load
+    window.onload = updateUI;
+  </script>
+</body>
+</html>

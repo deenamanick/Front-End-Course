@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #quizContainer {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin: 8px 0;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #score {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+      color: #28a745;
+      font-weight: bold;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="quizContainer">
+    <h2>🧠 Quiz App</h2>
+    <!-- Question and options go here -->
+  </div>
+  <p id="score"></p>
+
+  <script>
+    const questions = [
+      {
+        question: 'What is the capital of France?',
+        options: ['Paris', 'London', 'Berlin'],
+        answer: 'Paris'
+      },
+      {
+        question: 'Which planet is known as the Red Planet?',
+        options: ['Earth', 'Mars', 'Jupiter'],
+        answer: 'Mars'
+      },
+      {
+        question: 'What is 10 + 20?',
+        options: ['30', '25', '40'],
+        answer: '30'
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    const container = document.getElementById('quizContainer');
+    const scoreBox = document.getElementById('score');
+
+    function loadQuestion() {
+      const q = questions[current];
+      container.innerHTML = `<h2>🧠 Quiz App</h2><p>${q.question}</p>`;
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.onclick = () => {
+          if (opt === q.answer) score++;
+          current++;
+          if (current < questions.length) {
+            loadQuestion();
+          } else {
+            container.innerHTML = '';
+            scoreBox.textContent = `🎉 Your Score: ${score} / ${questions.length}`;
+          }
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>

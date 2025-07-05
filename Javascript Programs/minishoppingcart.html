@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Shopping Cart</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    .product, .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .product button, .cart-item button {
+      padding: 5px 10px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .cart {
+      margin-top: 30px;
+    }
+    .cart h3 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mini Shopping Cart</h2>
+
+  <div id="productList">
+    <div class="product" data-name="Laptop" data-price="60000">
+      <span>Laptop - ₹60,000</span>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product" data-name="Phone" data-price="25000">
+      <span>Phone - ₹25,000</span>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product" data-name="Headphones" data-price="3000">
+      <span>Headphones - ₹3,000</span>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="cart">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p><strong>Total: ₹<span id="total">0</span></strong></p>
+  </div>
+
+  <script>
+    const cartItems = [];
+    const cartDiv = document.getElementById('cartItems');
+    const totalSpan = document.getElementById('total');
+
+    function updateCart() {
+      cartDiv.innerHTML = '';
+      let total = 0;
+
+      cartItems.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item.name} - ₹${item.price}</span>
+          <button onclick="removeItem(${index})">Remove</button>
+        `;
+        cartDiv.appendChild(div);
+        total += item.price;
+      });
+
+      totalSpan.textContent = total;
+    }
+
+    function removeItem(index) {
+      cartItems.splice(index, 1);
+      updateCart();
+    }
+
+    document.querySelectorAll('.product button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const product = e.target.parentElement;
+        const name = product.dataset.name;
+        const price = parseInt(product.dataset.price);
+        cartItems.push({ name, price });
+        updateCart();
+      });
+    });
+  </script>
+
+</body>
+</html>

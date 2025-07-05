@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Carousel</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+    img {
+      width: 400px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Image Carousel</h2>
+  <img id="carousel" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" />
+  <br/>
+  <button onclick="prev()">Prev</button>
+  <button onclick="next()">Next</button>
+
+  <script>
+    const images = [
+        'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg',
+        'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg',
+        'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg'
+    ];
+    let current = 0;
+
+    function updateImage() {
+      document.getElementById('carousel').src = images[current];
+    }
+
+    function next() {
+      current = (current + 1) % images.length;
+      updateImage();
+    }
+
+    function prev() {
+      current = (current - 1 + images.length) % images.length;
+      updateImage();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Mini Projects</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #0077cc;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px 16px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      background-color: #f1f5ff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #clock,
+    #diceResult,
+    #formMessage,
+    #colorDisplay,
+    #countdown,
+    #musicStatus,
+    #quizQuestion,
+    #guessResult {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    #calcDisplay {
+      width: 100%;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      text-align: right;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .calc-grid button {
+      padding: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .calc-grid button:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 15px;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 JavaScript Mini Projects</h1>
+
+  <!-- 1. Number Guessing Game -->
+  <section>
+    <h2>1. Number Guessing Game</h2>
+    <p>Guess a number between 1 and 100</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="guessResult"></p>
+  </section>
+
+  <!-- 2. Digital Clock -->
+  <section>
+    <h2>2. Digital Clock</h2>
+    <p id="clock"></p>
+  </section>
+
+  <!-- 3. To-Do List -->
+  <section>
+    <h2>3. To-Do List</h2>
+    <input type="text" id="todoInput" placeholder="Add new task" />
+    <button onclick="addTodo()">Add</button>
+    <ul id="todoList"></ul>
+  </section>
+
+  <!-- 4. Calculator -->
+  <section>
+    <h2>4. Calculator</h2>
+    <input type="text" id="calcDisplay" readonly />
+    <div class="calc-grid">
+      <button onclick="calc('C')">C</button>
+      <button onclick="calc('⌫')">⌫</button>
+      <button onclick="calc('%')">%</button>
+      <button onclick="calc('/')">÷</button>
+
+      <button onclick="calc('7')">7</button>
+      <button onclick="calc('8')">8</button>
+      <button onclick="calc('9')">9</button>
+      <button onclick="calc('*')">×</button>
+
+      <button onclick="calc('4')">4</button>
+      <button onclick="calc('5')">5</button>
+      <button onclick="calc('6')">6</button>
+      <button onclick="calc('-')">−</button>
+
+      <button onclick="calc('1')">1</button>
+      <button onclick="calc('2')">2</button>
+      <button onclick="calc('3')">3</button>
+      <button onclick="calc('+')">+</button>
+
+      <button onclick="calc('0')" style="grid-column: span 2;">0</button>
+      <button onclick="calc('.')">.</button>
+      <button onclick="calc('=')">=</button>
+    </div>
+  </section>
+
+  <!-- 5. Dice Roll -->
+  <section>
+    <h2>5. Dice Roll</h2>
+    <button onclick="rollDice()">Roll Dice</button>
+    <p id="diceResult"></p>
+  </section>
+
+  <!-- 6. Form Validator -->
+  <section>
+    <h2>6. Form Validator</h2>
+    <input type="text" id="name" placeholder="Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <button onclick="validateForm()">Submit</button>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- 7. Color Picker -->
+  <section>
+    <h2>7. Random Color Generator</h2>
+    <button onclick="generateColor()">Generate Color</button>
+    <p id="colorDisplay"></p>
+  </section>
+
+  <!-- 8. Countdown Timer -->
+  <section>
+    <h2>8. Countdown Timer</h2>
+    <input type="number" id="countdownInput" placeholder="Seconds" />
+    <button onclick="startCountdown()">Start</button>
+    <p id="countdown"></p>
+  </section>
+
+  <!-- 9. Music Player UI (Dummy) -->
+  <section>
+    <h2>9. Music Player UI</h2>
+    <button onclick="toggleMusic()" id="musicBtn">Play</button>
+    <p id="musicStatus">Paused</p>
+  </section>
+
+  <!-- 10. Flashcard Quiz -->
+  <section>
+    <h2>10. Flashcard Quiz</h2>
+    <p id="quizQuestion"></p>
+    <button onclick="nextQuestion()">Next Question</button>
+  </section>
+
+  <script>
+    // 1. Number Guessing
+    const secret = Math.floor(Math.random() * 100 + 1);
+    function checkGuess() {
+      const guess = +document.getElementById('guessInput').value;
+      const result = guess === secret ? '🎉 Correct!' : guess > secret ? 'Too high ⬆️' : 'Too low ⬇️';
+      document.getElementById('guessResult').textContent = result;
+    }
+
+    // 2. Digital Clock
+    setInterval(() => {
+      document.getElementById('clock').textContent = new Date().toLocaleTimeString();
+    }, 1000);
+
+    // 3. To-Do List
+    function addTodo() {
+      const val = document.getElementById('todoInput').value.trim();
+      if (!val) return;
+      const li = document.createElement('li');
+      li.textContent = val;
+      li.onclick = () => li.remove();
+      document.getElementById('todoList').appendChild(li);
+      document.getElementById('todoInput').value = '';
+    }
+
+    // 4. Calculator
+    let calcExp = '';
+    function calc(val) {
+      const display = document.getElementById('calcDisplay');
+      if (val === 'C') {
+        calcExp = '';
+      } else if (val === '⌫') {
+        calcExp = calcExp.slice(0, -1);
+      } else if (val === '=') {
+        try {
+          calcExp = eval(calcExp.replace(/%/g, '/100')).toString();
+        } catch {
+          calcExp = 'Error';
+        }
+      } else {
+        calcExp += val;
+      }
+      display.value = calcExp;
+    }
+
+    // 5. Dice Roll
+    function rollDice() {
+      const roll = Math.floor(Math.random() * 6 + 1);
+      document.getElementById('diceResult').textContent = `🎲 You rolled a ${roll}`;
+    }
+
+    // 6. Form Validator
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const isValid = name.length > 0 && email.includes('@') && email.includes('.');
+      document.getElementById('formMessage').textContent = isValid ? '✅ Valid input' : '❌ Invalid input';
+    }
+
+    // 7. Color Generator
+    function generateColor() {
+      const color = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      document.getElementById('colorDisplay').textContent = color;
+      document.body.style.backgroundColor = color;
+    }
+
+    // 8. Countdown
+    let timer;
+    function startCountdown() {
+      let time = +document.getElementById('countdownInput').value;
+      clearInterval(timer);
+      timer = setInterval(() => {
+        if (time > 0) {
+          document.getElementById('countdown').textContent = `${time--} seconds remaining...`;
+        } else {
+          document.getElementById('countdown').textContent = '⏰ Time Up!';
+          clearInterval(timer);
+        }
+      }, 1000);
+    }
+
+    // 9. Music Player Dummy
+    let playing = false;
+    function toggleMusic() {
+      playing = !playing;
+      document.getElementById('musicStatus').textContent = playing ? '🎵 Playing...' : '⏸️ Paused';
+      document.getElementById('musicBtn').textContent = playing ? 'Pause' : 'Play';
+    }
+
+    // 10. Flashcard Quiz
+    const questions = [
+      "💡 What is JavaScript?",
+      "🔁 What is a loop?",
+      "🧠 What is a variable?",
+      "⚙️ What is a function?",
+      "🌐 What is the DOM?"
+    ];
+    let qIndex = 0;
+    function nextQuestion() {
+      document.getElementById('quizQuestion').textContent = questions[qIndex++ % questions.length];
+    }
+    nextQuestion();
+  </script>
+</body>
+</html>
