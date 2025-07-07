@@ -91,7 +91,7 @@ switch and ternary condition
 
 ► Example:
 
-![If Condition Screenshot](./assets/ifconditionjs.png "If Condition Screenshot") *(placeholder image)*
+![If Condition Screenshot](./assets/ifconditionjs.png "If Condition Screenshot")  
 
 ► Output:
 
@@ -106,7 +106,7 @@ if it's false.
 
 ► Example:
 
-![If Else Condition Screenshot](./assets/ifelsejs.png "If Else Condition Screenshot") *(placeholder image)*
+![If Else Condition Screenshot](./assets/ifelsejs.png "If Else Condition Screenshot")  
 
 ► Output:
 
@@ -120,7 +120,7 @@ You are a minor.
 
 ► Example:
 
-![If Else If Condition Screenshot](./assets/ifelseifjs.png "If Condition Screenshot") *(placeholder image)*
+![If Else If Condition Screenshot](./assets/ifelseifjs.png "If Condition Screenshot")  
 
 ► Output:
 
@@ -135,7 +135,7 @@ possible values** of a variable.
 
 ► Example:
 
-![Switch Condition Screenshot](./assets/switchjs.png "Switch Screenshot") *(placeholder image)*
+![Switch Condition Screenshot](./assets/switchjs.png "Switch Screenshot")  
 
 ► Output : **Wednesday**
 
@@ -147,7 +147,7 @@ values based on a condition.
 
 ► Example:
 
-![Ternary Condition Screenshot](./assets/ternaryjs.png "Ternary Condition Screenshot") *(placeholder image)*
+![Ternary Condition Screenshot](./assets/ternaryjs.png "Ternary Condition Screenshot")  
 
 ► Output:
 
@@ -162,7 +162,7 @@ block of code as long as a specified condition is true.
 
 ► Example:
 
-![Looping Screenshot](./assets/loopingjs.png "Looping Screenshot") *(placeholder image)*
+![Looping Screenshot](./assets/loopingjs.png "Looping Screenshot")  
 
 
 ## For Loop
@@ -177,7 +177,7 @@ includes three parts:
 
 ► Example:
 
-![For Loop Screenshot](./assets/forloopjs.png "For Loop Screenshot") *(placeholder image)*
+![For Loop Screenshot](./assets/forloopjs.png "For Loop Screenshot")  
 
 ► Output : 0 1 2 3 4
 
@@ -189,7 +189,7 @@ true. The condition is evaluated before the loop body.
 
 ► Example:
 
-![While Loop Screenshot](./assets/whileloopjs.png "While Loop Screenshot") *(placeholder image)*
+![While Loop Screenshot](./assets/whileloopjs.png "While Loop Screenshot")  
 
 ► Output : 0 1 2 3 4
 
@@ -201,7 +201,7 @@ because the condition is checked after the loop body.
 
 ► Example:
 
-![Do While Loop Screenshot](./assets/dowhilejs.png "Do while Loop Screenshot") *(placeholder image)*
+![Do While Loop Screenshot](./assets/dowhilejs.png "Do while Loop Screenshot")  
 
 ► Output : 0 1 2 3 4
 
@@ -213,7 +213,7 @@ object
 
 ► Example:
 
-![For In Loop Screenshot](./assets/forinjs.png "For In Loop Screenshot") *(placeholder image)*
+![For In Loop Screenshot](./assets/forinjs.png "For In Loop Screenshot")  
 
 ► Output :
 
@@ -229,7 +229,7 @@ maps, etc.
 
 ► Example:
 
-![For Of Loop Screenshot](./assets/forofjs.png "For Of Loop Screenshot") *(placeholder image)*
+![For Of Loop Screenshot](./assets/forofjs.png "For Of Loop Screenshot")  
 
 ► Output :
 
@@ -260,7 +260,7 @@ condition.
 
 ► Example:
 
-![Break Screenshot](./assets/breakjs.png "Break Screenshot") *(placeholder image)*
+![Break Screenshot](./assets/breakjs.png "Break Screenshot")  
 
 ► Output : 0 1 2
 
@@ -273,7 +273,7 @@ condition.
 
 ► Example:
 
-![Continue Loop Screenshot](./assets/continuejs.png "Continue Screenshot") *(placeholder image)*
+![Continue Loop Screenshot](./assets/continuejs.png "Continue Screenshot")  
 
 ► Output : 0 1 2 4
 
@@ -285,7 +285,7 @@ store **multiple values** in a single variable.
 
 ► Example:
 
-![Array Screenshot](./assets/arrayjs.png "Array Screenshot") *(placeholder image)*
+![Array Screenshot](./assets/arrayjs.png "Array Screenshot")  
 
 ► Output : apple
 
@@ -321,7 +321,7 @@ store **multiple values** in a single variable.
 
 ► Example:
 
-![Push Screenshot](./assets/pushjs.png "Push Screenshot") *(placeholder image)*
+![Push Screenshot](./assets/pushjs.png "Push Screenshot")  
 
 ► Output: ["apple", "banana", "cherry"]
 
@@ -332,7 +332,7 @@ store **multiple values** in a single variable.
 
 ► Example:
 
-![Pop Screenshot](./assets/popjs.png "Pop Screenshot") *(placeholder image)*
+![Pop Screenshot](./assets/popjs.png "Pop Screenshot")  
 
 ► Output: ["apple", "banana"]
 
@@ -345,7 +345,7 @@ store **multiple values** in a single variable.
 ```
 ► Example:
 ```
-![Shift Screenshot](./assets/20.png "Shift Screenshot") *(placeholder image)*
+![Shift Screenshot](./assets/20.png "Shift Screenshot")  
 
 ```
 ► Output: ["banana", "cherry"]
@@ -359,7 +359,7 @@ store **multiple values** in a single variable.
 ```
 ► Example:
 ```
-![Unshift Screenshot](./assets/21.png "Unshift Screenshot") *(placeholder image)*
+![Unshift Screenshot](./assets/21.png "Unshift Screenshot")  
 
 ```
 ► Output: ["apple", "banana", "cherry"]
@@ -372,7 +372,7 @@ if not found.
 
 ► Example:
 
-![Index Of](./assets/22.png "Index Of Screenshot") *(placeholder image)*
+![Index Of](./assets/22.png "Index Of Screenshot")  
 
 ► Output: 1
 
@@ -383,7 +383,7 @@ if not found.
 
 ► Example:
 
-![For Each](./assets/23.png "For Each Screenshot") *(placeholder image)*
+![For Each](./assets/23.png "For Each Screenshot")  
 
 ► Output:
 
@@ -400,7 +400,7 @@ item.
 
 ► Example:
 
-![Map ](./assets/24.png "Map Screenshot") *(placeholder image)*
+![Map ](./assets/24.png "Map Screenshot")  
 
 ► Output: [2, 4, 6]
 
@@ -412,7 +412,7 @@ condition.
 
 ► Example:
 
-![Filter](./assets/25.png "Filter Screenshot") *(placeholder image)*
+![Filter](./assets/25.png "Filter Screenshot")  
 
 ► Output: [2, 4]
 
@@ -423,7 +423,7 @@ condition.
 
 ► Example:
 
-![Find](./assets/26.png "Find Screenshot") *(placeholder image)*
+![Find](./assets/26.png "Find Screenshot")  
 
 ► Output: 6
 
@@ -434,7 +434,7 @@ condition.
 
 ► Example:
 
-![Join](./assets/27.png "Join Screenshot") *(placeholder image)*
+![Join](./assets/27.png "Join Screenshot")  
 
 ► Output: apple, banana, cherry
 
@@ -445,7 +445,7 @@ condition.
 
 ► Example:
 
-![Reverse](./assets/28.png "Reverse Screenshot") *(placeholder image)*
+![Reverse](./assets/28.png "Reverse Screenshot")  
 
 ► Output: [3, 2, 1]
 
@@ -469,7 +469,7 @@ indexOf()** , etc.
 
 ► Example:
 
-![String](./assets/29.jpg "String Screenshot") *(placeholder image)*
+![String](./assets/29.jpg "String Screenshot")  
 
 
 ## 🔤 Common String Methods
@@ -496,7 +496,7 @@ indexOf()** , etc.
 
 ► Example:
 
-![Length](./assets/30.png "Length Screenshot") *(placeholder image)*
+![Length](./assets/30.png "Length Screenshot")  
 
 ► Output: 5
 
@@ -507,7 +507,7 @@ indexOf()** , etc.
 
 ► Example:
 
-![To Uppercase / To Lowercase](./assets/31.png "To Uppercase / To Lowercase Screenshot") *(placeholder image)*
+![To Uppercase / To Lowercase](./assets/31.png "To Uppercase / To Lowercase Screenshot")  
 
 ► Output:
 
@@ -523,7 +523,7 @@ javascript
 
 ► Example:
 
-![Char At](./assets/32.png "Char At Screenshot") *(placeholder image)*
+![Char At](./assets/32.png "Char At Screenshot")  
 
 ► Output: e
 
@@ -535,7 +535,7 @@ substring.
 
 ► Example:
 
-![Index of](./assets/33.png "Index Of Screenshot") *(placeholder image)*
+![Index of](./assets/33.png "Index Of Screenshot")  
 
 ► Output: 11
 
@@ -546,7 +546,7 @@ substring.
 
 ► Example:
 
-![Includes](./assets/34.png "Includes Screenshot") *(placeholder image)*
+![Includes](./assets/34.png "Includes Screenshot")  
 
 ► Output: true
 
@@ -557,7 +557,7 @@ substring.
 
 ► Example:
 
-![Replace ](./assets/35.png "Replace Screenshot") *(placeholder image)*
+![Replace ](./assets/35.png "Replace Screenshot")  
 
 ► Output:
 
@@ -571,7 +571,7 @@ Hello JavaScript
 
 ► Example:
 
-![Slice ](./assets/36.png "Slice Screenshot") *(placeholder image)*
+![Slice ](./assets/36.png "Slice Screenshot")  
 
 ► Output:
 
@@ -585,7 +585,7 @@ Java
 
 ► Example:
 
-![Substring ](./assets/37.png "Substring Screenshot") *(placeholder image)*
+![Substring ](./assets/37.png "Substring Screenshot")  
 
 ► Output:
 
@@ -599,7 +599,7 @@ gram
 
 ► Example:
 
-![Split ](./assets/38.png "Split Screenshot") *(placeholder image)*
+![Split ](./assets/38.png "Split Screenshot")  
 
 ► Output:
 
@@ -613,7 +613,7 @@ gram
 
 ► Example:
 
-![Trim ](./assets/39.png "Trim Screenshot") *(placeholder image)*
+![Trim ](./assets/39.png "Trim Screenshot")  
 
 ► Output:
 
@@ -628,7 +628,7 @@ syntax.
 
 ► Example:
 
-![Template Strings ](./assets/40.png "Template Strings Screenshot") *(placeholder image)*
+![Template Strings ](./assets/40.png "Template Strings Screenshot")  
 
 ► Output:
 
@@ -661,7 +661,7 @@ person.name; // John
 
 ► Example:
 
-![Object method ](./assets/41.jpg "Object method Screenshot") *(placeholder image)*
+![Object method ](./assets/41.jpg "Object method Screenshot")  
 
 
 ## Object Display
@@ -678,7 +678,7 @@ JSON.stringify.
 
 ► Example:
 
-![Object Assessors ](./assets/42.jpg "Object Assessors Screenshot") *(placeholder image)*
+![Object Assessors ](./assets/42.jpg "Object Assessors Screenshot")  
 
 
 ## Object Sets
@@ -687,7 +687,7 @@ JSON.stringify.
 
 ► Example:
 
-![Object Sets ](./assets/43.jpg "Object Sets Screenshot") *(placeholder image)*
+![Object Sets ](./assets/43.jpg "Object Sets Screenshot")  
 
 
 ## Object Maps
@@ -696,7 +696,7 @@ JSON.stringify.
 
 ► Example:
 
-![Object Maps ](./assets/44.jpg "Object Maps Screenshot") *(placeholder image)*
+![Object Maps ](./assets/44.jpg "Object Maps Screenshot")  
 
 
 ## Function Intro
@@ -736,7 +736,7 @@ named.
 
 ► Example:
 
-![Function Expression ](./assets/47.png "Function Expression Screenshot") *(placeholder image)*
+![Function Expression ](./assets/47.png "Function Expression Screenshot")  
 
 ► Output: 8
 
@@ -747,7 +747,7 @@ named.
 
 ► Example:
 
-![Arrow Function ](./assets/48.png "Arrow Function Screenshot") *(placeholder image)*
+![Arrow Function ](./assets/48.png "Arrow Function Screenshot")  
 
 ► Output: 20
 
@@ -759,7 +759,7 @@ capital letter.
 
 ► Example:
 
-![Constructor Function ](./assets/49.png "Constructor Function Screenshot") *(placeholder image)*
+![Constructor Function ](./assets/49.png "Constructor Function Screenshot")  
 
 ► Output: John
 
@@ -770,7 +770,7 @@ capital letter.
 
 ► Example:
 
-![Function Parameter ](./assets/50.jpg "Function Parameter Screenshot") *(placeholder image)*
+![Function Parameter ](./assets/50.jpg "Function Parameter Screenshot")  
 
 
 ## Function Invocation
@@ -779,7 +779,7 @@ capital letter.
 
 ► Example:
 
-![Function Invocation ](./assets/51.jpg "Function Invocation Screenshot") *(placeholder image)*
+![Function Invocation ](./assets/51.jpg "Function Invocation Screenshot")  
 
 
 ## Function Call
@@ -788,7 +788,7 @@ capital letter.
 
 ► Example:
 
-![Function Call ](./assets/52.jpg "Function Call Screenshot") *(placeholder image)*
+![Function Call ](./assets/52.jpg "Function Call Screenshot")  
 
 
 ## Function Bind
@@ -798,7 +798,7 @@ value.
 
 ► Example:
 
-![Function Bind ](./assets/53.jpg "Function Bind Screenshot") *(placeholder image)*
+![Function Bind ](./assets/53.jpg "Function Bind Screenshot")  
 
 
 ## Event Handling
@@ -818,7 +818,7 @@ value.
 
 ► <button onclick='myFunction()'>Click</button>
 
-![Onclick](./assets/54.png "Onclick Screenshot") *(placeholder image)*
+![Onclick](./assets/54.png "Onclick Screenshot")  
 
 ## mouseover / mouseout Events
 
@@ -831,7 +831,7 @@ value.
 
 ```
 
-![Mouse Over / Out ](./assets/55.png "Mouse Over / Out  Screenshot") *(placeholder image)*
+![Mouse Over / Out ](./assets/55.png "Mouse Over / Out  Screenshot")  
 
 ```
 ► Output:
@@ -847,7 +847,7 @@ Turns black again when the mouse leaves.
 
 ► Example:
 
-![Key Down / Up ](./assets/56.png "Key Down / Up  Screenshot") *(placeholder image)*
+![Key Down / Up ](./assets/56.png "Key Down / Up  Screenshot")  
 
 ► Output: In the console
 
@@ -864,7 +864,7 @@ Key up
 
 ► Example:
 
-![Focus / Blur ](./assets/57.png "Focus / Blur  Screenshot") *(placeholder image)*
+![Focus / Blur ](./assets/57.png "Focus / Blur  Screenshot")  
 
 ► Output:
 
@@ -879,7 +879,7 @@ Returns to white when you click elsewhere.
 
 ► Example:
 
-![Double Click ](./assets/58.png "Double Click  Screenshot") *(placeholder image)*
+![Double Click ](./assets/58.png "Double Click  Screenshot")  
 
 ► Output: Text changes to:
 
@@ -893,7 +893,7 @@ You double-clicked me!
 
 ► Example:
 
-![Load Event ](./assets/59.png "Load Event  Screenshot") *(placeholder image)*
+![Load Event ](./assets/59.png "Load Event  Screenshot")  
 
 ► Output: Text changes to:
 
@@ -908,7 +908,7 @@ document.
 
 ► Example:
 
-![Add Event Listener ](./assets/60.png "Add Event Listener  Screenshot") *(placeholder image)*
+![Add Event Listener ](./assets/60.png "Add Event Listener  Screenshot")  
 
 ► Output: When button is clicked:
 
@@ -922,7 +922,7 @@ Hi there!
 
 ► Example:
 
-![Change Event ](./assets/61.png "Change Event  Screenshot") *(placeholder image)*
+![Change Event ](./assets/61.png "Change Event  Screenshot")  
 
 ► Output: If you choose "CSS", it alerts:
 
@@ -936,7 +936,7 @@ You selected: CSS
 
 ► Example:
 
-![On Submit Event ](./assets/62.png "On Submit Event  Screenshot") *(placeholder image)*
+![On Submit Event ](./assets/62.png "On Submit Event  Screenshot")  
 
 
 ## HTML DOM Documents
@@ -961,11 +961,8 @@ becomes a document object.
 
 ## Why is DOM Important?
 
-► Because it lets you dynamically control your webpage using
+► Because it lets you dynamically control your webpage using JavaScript.
 
-```
-JavaScript.
-```
 ► For example:
 
 ► Change text
@@ -997,7 +994,7 @@ a specified value.
 ► The getElementById() method returns null if the
 element does not exist.
 
-![getelementbyId ](./assets/63.png "Get Element By ID Screenshot")*(placeholder image)*
+![getelementbyId ](./assets/63.png "Get Element By ID Screenshot") 
 
 
 ## getElementsByClassName()
@@ -1005,7 +1002,7 @@ element does not exist.
 ► The getElementsByClassName() method returns a
 collection of elements with a specified class name(s).
 
-![getelementbyClassName ](./assets/64.png "Get Elements By Class Name Screenshot")*(placeholder image)*
+![getelementbyClassName ](./assets/64.png "Get Elements By Class Name Screenshot") 
 
 
 ## getElementsByTagName()
@@ -1018,7 +1015,7 @@ HTMLCollection.
 
 ► The getElementsByTagName() property is read-only.
 
-![getelementByTagName ](./assets/65.png "Get Elements By Tag Name Screenshot")*(placeholder image)*
+![getelementByTagName ](./assets/65.png "Get Elements By Tag Name Screenshot") 
 
 
 ## querySelector()
@@ -1029,7 +1026,7 @@ matches a CSS selector.
 ► To return all matches (not only the first), use the
 querySelectorAll() instead.
 
-![Query Selector ](./assets/66.png "Query Selector Screenshot")*(placeholder image)*
+![Query Selector ](./assets/66.png "Query Selector Screenshot") 
 
 
 ## querySelectorAll()
@@ -1037,7 +1034,7 @@ querySelectorAll() instead.
 ► The querySelectorAll() method returns all elements that
 matches a CSS selector(s).
 
-![Query Selector All ](./assets/67.png "Query Selector All Screenshot")*(placeholder image)*
+![Query Selector All ](./assets/67.png "Query Selector All Screenshot") 
 
 
 ## JS Validation Intro
@@ -1055,7 +1052,7 @@ matches a CSS selector(s).
 
 ► Example:
 
-![Null Constraint Validation ](./assets/68.jpg "Null Constraint Validation Screenshot")*(placeholder image)*
+![Null Constraint Validation ](./assets/68.jpg "Null Constraint Validation Screenshot") 
 
 
 ## Password Validation
@@ -1066,7 +1063,7 @@ matches a CSS selector(s).
 
 ► if(pwd.length < 8) alert('Too short');
 
-![Password Validation ](./assets/69.jpg "Password Validation Screenshot")*(placeholder image)*
+![Password Validation ](./assets/69.jpg "Password Validation Screenshot") 
 
 
 ## Retype Password Validation
@@ -1075,7 +1072,7 @@ matches a CSS selector(s).
 
 ► Example:
 
-![Retype Password Validation ](./assets/70.jpg "Retype Password Validation Screenshot")*(placeholder image)*
+![Retype Password Validation ](./assets/70.jpg "Retype Password Validation Screenshot") 
 
 
 ## Number Validation
@@ -1084,7 +1081,7 @@ matches a CSS selector(s).
 
 ► Example:
 
-![Number Validation ](./assets/71.png "Number Validation Screenshot")*(placeholder image)*
+![Number Validation ](./assets/71.png "Number Validation Screenshot") 
 
 
 ## Email validation
@@ -1093,6 +1090,6 @@ matches a CSS selector(s).
 
 ► Example:
 
-![Email Validation ](./assets/72.jpg "Email Validation Screenshot")*(placeholder image)*
+![Email Validation ](./assets/72.jpg "Email Validation Screenshot") 
 
 
