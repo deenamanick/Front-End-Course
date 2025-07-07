@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>jQuery To-Do</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    li { cursor: pointer; }
+    .done { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+
+  <h2>📝 To-Do List</h2>
+  <input type="text" id="task" placeholder="Enter task" />
+  <button id="addBtn">Add</button>
+  <ul id="todoList"></ul>
+
+  <script>
+    $('#addBtn').click(function () {
+      const task = $('#task').val();
+      if (task !== '') {
+        $('#todoList').append(`<li>${task}</li>`);
+        $('#task').val('');
+      }
+    });
+
+    $('#todoList').on('click', 'li', function () {
+      $(this).toggleClass('done');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dictionary Lookup with jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f8f9fa; }
+    input, button { padding: 10px; font-size: 16px; }
+    #result { margin-top: 20px; padding: 15px; background: #fff; border-radius: 5px; }
+    .meaning { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>📖 Dictionary Lookup</h2>
+  <input type="text" id="wordInput" placeholder="Enter a word" />
+  <button id="searchBtn">Search</button>
+
+  <div id="result"></div>
+
+  <script>
+    $('#searchBtn').click(function () {
+      const word = $('#wordInput').val().trim();
+      if (!word) return alert('Please enter a word.');
+
+      $('#result').html('<em>Searching...</em>');
+
+      $.ajax({
+        url: `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`,
+        method: 'GET',
+        success: function (data) {
+          const meanings = data[0].meanings;
+          let output = `<h3>Word: ${data[0].word}</h3>`;
+          meanings.forEach((meaning, i) => {
+            output += `<div class="meaning">
+              <strong>${meaning.partOfSpeech}</strong>: 
+              ${meaning.definitions[0].definition}
+            </div>`;
+          });
+          $('#result').html(output);
+        },
+        error: function () {
+          $('#result').html('<span style="color: red;">No definitions found. Try another word.</span>');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

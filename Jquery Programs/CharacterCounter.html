@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Character Counter</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>✍️ Character Counter</h2>
+  <textarea id="text" maxlength="100" rows="4" cols="50" placeholder="Type something..."></textarea>
+  <p>Remaining: <span id="count">100</span> characters</p>
+
+  <script>
+    $('#text').keyup(function () {
+      const max = 100;
+      const length = $(this).val().length;
+      $('#count').text(max - length);
+    });
+  </script>
+
+</body>
+</html>
