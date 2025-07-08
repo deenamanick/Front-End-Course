@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>jQuery Gallery Filter</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .filter-btns button { margin: 5px; }
+    .box { width: 150px; height: 150px; margin: 10px; display: inline-block; }
+    .nature { background: green; }
+    .city { background: gray; }
+    .food { background: orange; }
+  </style>
+</head>
+<body>
+
+  <h2>Image Gallery Filter</h2>
+  <div class="filter-btns">
+    <button data-filter="all">All</button>
+    <button data-filter="nature">Nature</button>
+    <button data-filter="city">City</button>
+    <button data-filter="food">Food</button>
+  </div>
+
+  <div class="gallery">
+    <div class="box nature"></div>
+    <div class="box city"></div>
+    <div class="box food"></div>
+    <div class="box nature"></div>
+    <div class="box city"></div>
+  </div>
+
+  <script>
+    $('.filter-btns button').click(function () {
+      const filter = $(this).data('filter');
+      if (filter === 'all') {
+        $('.box').show();
+      } else {
+        $('.box').hide();
+        $('.' + filter).show();
+      }
+    });
+  </script>
+
+</body>
+</html>

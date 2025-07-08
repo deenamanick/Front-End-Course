@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scroll To Top</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #topBtn {
+      position: fixed; bottom: 30px; right: 30px;
+      display: none;
+      background: #007BFF; color: white;
+      padding: 10px 15px; cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>⬆️ Scroll Down</h2>
+  <p style="height: 2000px;">Scroll to see the button...</p>
+
+  <div id="topBtn">Top</div>
+
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#topBtn').fadeIn();
+      } else {
+        $('#topBtn').fadeOut();
+      }
+    });
+
+    $('#topBtn').click(function () {
+      $('html, body').animate({ scrollTop: 0 }, 500);
+    });
+  </script>
+
+</body>
+</html>

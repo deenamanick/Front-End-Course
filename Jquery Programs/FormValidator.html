@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Validation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style> input { margin: 5px 0; display: block; } </style>
+</head>
+<body>
+
+  <h2>✅ jQuery Form Validation</h2>
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <button type="submit">Submit</button>
+  </form>
+  <p id="msg"></p>
+
+  <script>
+    $('#myForm').submit(function (e) {
+      e.preventDefault();
+      const name = $('#name').val();
+      const email = $('#email').val();
+      if (name === '' || email === '') {
+        $('#msg').text('All fields are required!').css('color', 'red');
+      } else {
+        $('#msg').text('Form submitted successfully!').css('color', 'green');
+      }
+    });
+  </script>
+
+</body>
+</html>
