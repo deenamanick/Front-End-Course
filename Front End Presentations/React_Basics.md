@@ -1,6 +1,4 @@
-# ReactJS Full
-
-# Presentation
+# ReactJS
 
 Detailed topics with examples and explanations
 
