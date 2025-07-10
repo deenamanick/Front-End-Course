@@ -21,6 +21,10 @@ This README walks through 10 simple React mini-projects designed to strengthen y
 13. [Tabs UI](#13-tabs-ui)
 14. [Star Rating](#14-star-rating)
 15. [Product Card with Modal](#15-product-card-with-modal)
+16. [Search Filter App](#16-search-filter-app)
+17. [Stopwatch](#17-stopwatch)
+18. [Multi-step Form](#18-multi-step-form)
+19. [Movie Browser](#19-movie-browser)
 
 ---
 
