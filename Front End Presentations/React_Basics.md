@@ -1,6 +1,4 @@
-# ReactJS Full
-
-# Presentation
+# ReactJS
 
 Detailed topics with examples and explanations
 
@@ -46,6 +44,118 @@ const element = <h1>Hello, world!</h1>;
 const name = 'John';
 const element = <h1>Hello, {name}!</h1>;
 ```
+
+## 🚀 Getting Started with React – Installation & App Setup
+
+### 🔧 Prerequisites
+
+Before creating a React app, make sure the following are installed:
+
+| Tool            | Purpose                                | Download Link                                                  |
+| --------------- | -------------------------------------- | -------------------------------------------------------------- |
+| **Node.js**     | JavaScript runtime environment         | [https://nodejs.org](https://nodejs.org)                       |
+| **npm**         | Node Package Manager (comes with Node) | Installed with Node.js                                         |
+| **Code Editor** | For writing code (e.g., VS Code)       | [https://code.visualstudio.com](https://code.visualstudio.com) |
+
+Check versions:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## ✅ Install Create React App
+
+`create-react-app` is the officially supported way to create a single-page React application with a good default configuration.
+
+### 🖥️ Using NPX (Recommended):
+
+```bash
+npx create-react-app my-app
+```
+
+* `npx`: Runs the package without globally installing it.
+* `my-app`: Name of the folder/project.
+
+*This command sets up everything: Webpack, Babel, ESLint, testing, service workers, etc.*
+
+---
+
+## 📂 Project Structure
+
+After installation, the folder structure will look like this:
+
+```
+my-app/
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
+```
+
+| Folder/File          | Purpose                              |
+| -------------------- | ------------------------------------ |
+| `/src`               | All your React components go here    |
+| `/public/index.html` | Main HTML template                   |
+| `App.js`             | Main component for rendering content |
+| `index.js`           | Entry point to render React into DOM |
+| `package.json`       | Project metadata and dependencies    |
+
+---
+
+## 🌎 Run the App
+
+Navigate into your app folder:
+
+```bash
+cd my-app
+```
+
+Start the development server:
+
+```bash
+npm start
+```
+
+This will launch the app in your default browser at:
+
+```
+http://localhost:3000
+```
+
+Live-reload is enabled by default. Any changes you make will instantly reflect in the browser.
+
+---
+
+## 🔧 Build for Production
+
+When you're ready to deploy your app, use the following command:
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build/` directory.
+
+---
+
+## 📅 Summary Table
+
+| Command                | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `npx create-react-app` | Create a new React project               |
+| `npm start`            | Run the development server               |
+| `npm run build`        | Build the app for production             |
+| `npm install`          | Install dependencies from `package.json` |
+
+---
+
 
 ### Rendering with ReactDOM
 
