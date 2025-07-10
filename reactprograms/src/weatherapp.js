@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 // ✅ Use your working API key here
-const API_KEY = 'Your OpenweatherMap API Key';
+const API_KEY = 'Your OpenweatherMap API Key'; 
+// Will Take some time after generating Api key and updated here as the api key needs some time to get activated , till then 401 error will come
 
 export function WeatherApp() {
   const [city, setCity] = useState('');
